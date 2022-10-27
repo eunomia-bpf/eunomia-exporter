@@ -1,0 +1,23 @@
+[package]
+name = "eunomia-exporter"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[dependencies]
+opentelemetry = { version="0.17" }
+opentelemetry-prometheus = "0.10"
+prometheus = "0.13"
+lazy_static = "1.4"
+hyper = { version = "0.14", features = ["full"] }
+tokio = { version = "1", features = ["full"] }
+link-cplusplus = "1.0"
+thiserror = "1.0"
+anyhow = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml = "0.9"
+clap = { version = "3.2.20", features = ["derive"] }
+
+[build-dependencies]
+bindgen = "0.60.1"
